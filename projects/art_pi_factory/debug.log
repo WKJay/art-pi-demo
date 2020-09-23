@@ -1,0 +1,390 @@
+[0.000] initConfigParams():  Configuration flags start
+[0.000] initConfigParams():   pend-halt-timeout              0
+[0.000] initConfigParams():   halt                           false
+[0.000] initConfigParams():  +config-file                    "D:/RT-ThreadStudio/repo/Extract/Debugger_Support_Packages/STMicroelectronics/ST-LINK_Debugger/1.2.0/config.txt"
+[0.000] initConfigParams():   persistent                     false
+[0.000] initConfigParams():  +log-file                       "debug.log"
+[0.001] initConfigParams():   log-level                      31
+[0.001] initConfigParams():  +port-number                    61235
+[0.001] initConfigParams():   verbose                        false
+[0.001] initConfigParams():  +refresh-delay                  15
+[0.001] initConfigParams():   verify                         false
+[0.001] initConfigParams():  +swd                            true
+[0.001] initConfigParams():   swo-port                       61234
+[0.001] initConfigParams():   cpu-clock                      8000000
+[0.001] initConfigParams():   swo-clock-div                  128
+[0.001] initConfigParams():   initialize-reset               false
+[0.001] initConfigParams():   debuggers                      false
+[0.001] initConfigParams():   serial-number                  ""
+[0.001] initConfigParams():   apid                           0
+[0.001] initConfigParams():   attach                         false
+[0.001] initConfigParams():   shared                         false
+[0.001] initConfigParams():   erase-all                      false
+[0.001] initConfigParams():   memory-map                     ""
+[0.001] initConfigParams():   ext-memory-loaders             false
+[0.001] initConfigParams():   extload                        ""
+[0.001] initConfigParams():  +stm32cubeprogrammer-path       "D:/RT-ThreadStudio/repo/Extract/Debugger_Support_Packages/STMicroelectronics/ST-LINK_Debugger/1.2.0/tools/bin"
+[0.001] initConfigParams():   temp-path                      ""
+[0.001] initConfigParams():   preserve-temps                 false
+[0.001] initConfigParams():   frequency                      -1
+[0.001] initConfigParams():   licenses                       false
+[0.001] initConfigParams():   ignore-rest                    false
+[0.001] initConfigParams():   version                        false
+[0.001] initConfigParams():   help                           false
+[0.001] initConfigParams():  Configuration flags end
+[0.002] init():  STMicroelectronics ST-LINK GDB server. Version 5.4.0
+Copyright (c) 2019, STMicroelectronics. All rights reserved.
+[0.015] Device_Initialise():  Target connection mode: Default
+[0.023] reset_hw_wtchpt_module():  Hardware watchpoint supported by the target 
+[0.029] Device_Initialise():  COM frequency = 4000 kHz
+[0.029] Device_Initialise():  ST-LINK Firmware version : V2J37M26
+[0.029] Device_Initialise():  Device ID: 0x450
+[0.030] Device_Initialise():  PC: 0x8014480
+[0.031] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[0.031] Device_Initialise():  ST-LINK detects target voltage = 3.29 V
+[0.033] Device_Initialise():  ST-LINK device status: HALT_MODE
+[0.033] initServerContext():  ST-LINK device initialization OK
+[0.042] WaitConnection():  Waiting for connection on port 61235...
+[0.645] WaitConnection():  Accepted connection on port 61235...
+[0.645] read():  <716> Rx: +$qSupported:multiprocess+;swbreak+;hwbreak+;qRelocInsn+#c9
+[0.656] write():  <716> Tx: +
+[0.656] write():  <716> Tx: $PacketSize=c00;qXfer:memory-map:read+;qXfer:features:read+;QStartNoAckMode+;QNonStop+;qXfer:threads:read+;hwbreak+;swbreak+#f2
+[0.656] read():  <716> Rx: +
+[0.656] read():  <716> Rx: $QStartNoAckMode#b0
+[0.656] write():  <716> Tx: +
+[0.656] write():  <716> Tx: $OK#9a
+[0.656] read():  <716> Rx: +
+[0.656] read():  <716> Rx: $Hg0#df
+[0.657] write():  <716> Tx: $#00
+[0.657] read():  <716> Rx: $qXfer:features:read:target.xml:0,bfb#75
+[0.657] write():  <716> Tx: $l<?xml version="1.0"?><!-- Copyright (C) 2009, 2010, 2011 Free Software Foundation, Inc.     Copying and distribution of this file, with or without modification,     are permitted in any medium without royalty provided the copyright     notice and this notice are preserved.  --><!DOCTYPE target SYSTEM "gdb-target.dtd"><target><feature name="org.gnu.gdb.arm.m-profile">  <reg name="r0" bitsize="32"/>  <reg name="r1" bitsize="32"/>  <reg name="r2" bitsize="32"/>  <reg name="r3" bitsize="32"/>  <reg name="r4" bitsize="32"/>  <reg name="r5" bitsize="32"/>  <reg name="r6" bitsize="32"/>  <reg name="r7" bitsize="32"/>  <reg name="r8" bitsize="32"/>  <reg name="r9" bitsize="32"/>  <reg name="r10" bitsize="32"/>  <reg name="r11" bitsize="32"/>  <reg name="r12" bitsize="32"/>  <reg name="sp" bitsize="32" type="data_ptr"/>  <reg name="lr" bitsize="32"/>  <reg name="pc" bitsize="32" type="code_ptr"/>  <reg name="xpsr" bitsize="32" regnum="25"/></feature><feature name="org.gnu.gdb.arm.vfp">  <reg name="d0" bitsize="64" type="ieee_double"/>  <reg name="d1" bitsize="64" type="ieee_double"/>  <reg name="d2" bitsize="64" type="ieee_double"/>  <reg name="d3" bitsize="64" type="ieee_double"/>  <reg name="d4" bitsize="64" type="ieee_double"/>  <reg name="d5" bitsize="64" type="ieee_double"/>  <reg name="d6" bitsize="64" type="ieee_double"/>  <reg name="d7" bitsize="64" type="ieee_double"/>  <reg name="d8" bitsize="64" type="ieee_double"/>  <reg name="d9" bitsize="64" type="ieee_double"/>  <reg name="d10" bitsize="64" type="ieee_double"/>  <reg name="d11" bitsize="64" type="ieee_double"/>  <reg name="d12" bitsize="64" type="ieee_double"/>  <reg name="d13" bitsize="64" type="ieee_double"/>  <reg name="d14" bitsize="64" type="ieee_double"/>  <reg name="d15" bitsize="64" type="ieee_double"/>  <reg name="fpscr" bitsize="32" type="int" group="float"/>  <reg name="PRIMASK" bitsize="32" regnum="93"/>  <reg name="BASEPRI" bitsize="32" regnum="94"/>  <reg name="FAULTMASK" bitsize="32" regnum="95"/>  <reg name="CONTROL" bitsize="32" regnum="96"/>  <reg name="MSP" bitsize="32" regnum="97"/>  <reg name="PSP" bitsize="32" regnum="98"/>    </feature></target>#aa
+[0.657] read():  <716> Rx: $QNonStop:0#8c
+[0.658] write():  <716> Tx: $OK#9a
+[0.658] read():  <716> Rx: $qTStatus#49
+[0.658] write():  <716> Tx: $#00
+[0.658] read():  <716> Rx: $?#3f
+[0.658] write():  <716> Tx: $S05#b8
+[0.658] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[0.659] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[0.659] read():  <716> Rx: $qAttached#8f
+[0.659] write():  <716> Tx: $#00
+[0.659] read():  <716> Rx: $Hc-1#09
+[0.659] write():  <716> Tx: $#00
+[0.659] read():  <716> Rx: $qC#b4
+[0.659] write():  <716> Tx: $QC1#c5
+[0.659] read():  <716> Rx: $g#67
+[0.670] write():  <716> Tx: $0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080024ffffffff8044010800000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff00000000000000000000000000000000000000000008002400000000#46
+[0.670] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[0.670] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[0.670] read():  <716> Rx: $qXfer:memory-map:read::0,bfb#14
+[0.671] write():  <716> Tx: $l<?xml version="1.0"?>\x0a<!DOCTYPE memory-map\x0a          PUBLIC "+//IDN gnu.org//DTD GDB Memory Map V1.0//EN"\x0a                 "http://sourceware.org/gdb/gdb-memory-map.dtd"><memory-map><memory type="ram" start="0x0" length="0x200000"/><memory type="flash" start="0x200000" length="0x200000">\x0a<property name="blocksize">0x400</property>\x0a</memory><memory type="ram" start="0x400000" length="0x7c00000"/><memory type="flash" start="0x8000000" length="0x200000">\x0a<property name="blocksize">0x400</property>\x0a</memory><memory type="ram" start="0x8200000" length="0xf7dfffff"/></memory-map>#11
+[0.672] read():  <716> Rx: $m8014480,4#36
+[0.672] handlePacket():  Reading 0x4 bytes of memory from addr 0x8014480 
+[0.672] write():  <716> Tx: $dff830d0#5f
+[0.673] read():  <716> Rx: $m8014480,2#34
+[0.673] handlePacket():  Reading 0x2 bytes of memory from addr 0x8014480 
+[0.673] write():  <716> Tx: $dff8#68
+[0.732] read():  <716> Rx: $qSymbol::#5b
+[0.732] write():  <716> Tx: $#00
+[0.734] read():  <716> Rx: $m8014480,4#36
+[0.734] handlePacket():  Reading 0x4 bytes of memory from addr 0x8014480 
+[0.735] write():  <716> Tx: $dff830d0#5f
+[0.735] read():  <716> Rx: $m8014480,2#34
+[0.735] handlePacket():  Reading 0x2 bytes of memory from addr 0x8014480 
+[0.736] write():  <716> Tx: $dff8#68
+[0.738] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[0.738] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[0.748] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[0.749] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[0.759] read():  <716> Rx: $mffffffff,4#fd
+[0.759] handlePacket():  Reading 0x4 bytes of memory from addr 0xffffffff 
+[0.759] ReadMemory():  Wrapping read detected. Addr: 0xffffffff; Length: 4
+[0.760] write():  <716> Tx: $E31#a9
+[0.760] read():  <716> Rx: $mffffffff,4#fd
+[0.760] handlePacket():  Reading 0x4 bytes of memory from addr 0xffffffff 
+[0.760] ReadMemory():  Wrapping read detected. Addr: 0xffffffff; Length: 4
+[0.760] write():  <716> Tx: $E31#a9
+[0.813] read():  <716> Rx: $m9006a3e4,2#c7
+[0.814] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a3e4 
+[0.815] write():  <716> Tx: $E31#a9
+[0.818] read():  <716> Rx: $m9006a4fc,2#f8
+[0.818] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a4fc 
+[0.819] write():  <716> Tx: $E31#a9
+[0.822] read():  <716> Rx: $m90054526,2#6a
+[0.822] handlePacket():  Reading 0x2 bytes of memory from addr 0x90054526 
+[0.823] write():  <716> Tx: $E31#a9
+[0.825] read():  <716> Rx: $m90059e62,2#9f
+[0.825] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e62 
+[0.826] write():  <716> Tx: $E31#a9
+[0.830] read():  <716> Rx: $m90061674,2#6c
+[0.830] handlePacket():  Reading 0x2 bytes of memory from addr 0x90061674 
+[0.831] write():  <716> Tx: $E31#a9
+[0.832] read():  <716> Rx: $m90059e62,2#9f
+[0.832] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e62 
+[0.833] write():  <716> Tx: $E31#a9
+[0.834] read():  <716> Rx: $m9005472a,2#97
+[0.834] handlePacket():  Reading 0x2 bytes of memory from addr 0x9005472a 
+[0.836] write():  <716> Tx: $E31#a9
+[0.851] read():  <716> Rx: $m9006a3e4,2#c7
+[0.851] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a3e4 
+[0.852] write():  <716> Tx: $E31#a9
+[0.853] read():  <716> Rx: $Z0,9006a3e4,2#10
+[0.854] write():  <716> Tx: $OK#9a
+[0.854] read():  <716> Rx: $vCont?#49
+[0.854] write():  <716> Tx: $vCont;c;s;t#05
+[0.854] read():  <716> Rx: $Hc0#db
+[0.855] write():  <716> Tx: $#00
+[0.855] read():  <716> Rx: $c#63
+[0.856] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[0.873] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[0.884] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[0.884] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (0)
+[0.890] Device_GetHaltReason():  NVIC_DFSR_REG = 0x0000000B 
+[0.892] write():  <716> Tx: $T05#b9
+[0.892] read():  <716> Rx: $g#67
+[0.903] write():  <716> Tx: $0000000000ed00e0e5a30690e5a30690efbeaddeefbeaddeefbeadde602e0024efbeaddeefbeaddeefbeaddeefbeadde00000000602e00248f460108e4a30690000000410000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000800c0024602e0024#b9
+[0.903] read():  <716> Rx: $m9006a3e4,4#c9
+[0.903] handlePacket():  Reading 0x4 bytes of memory from addr 0x9006a3e4 
+[0.904] write():  <716> Tx: $dff830d0#5f
+[0.905] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[0.906] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[0.906] read():  <716> Rx: $z0,9006a3e4,2#30
+[0.906] write():  <716> Tx: $OK#9a
+[1.070] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[1.070] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[1.070] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[1.071] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[107.189] read():  <716> Rx: $m90059e62,2#9f
+[107.190] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e62 
+[107.190] write():  <716> Tx: $134b#fa
+[107.191] read():  <716> Rx: $m90059eb0,4#cb
+[107.191] handlePacket():  Reading 0x4 bytes of memory from addr 0x90059eb0 
+[107.191] write():  <716> Tx: $543e0024#c7
+[107.191] read():  <716> Rx: $m90059e7a,2#cf
+[107.191] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e7a 
+[107.192] write():  <716> Tx: $fb79#38
+[109.513] read():  <716> Rx: $Z0,90059e7a,2#18
+[109.513] write():  <716> Tx: $OK#9a
+[109.514] read():  <716> Rx: $c#63
+[109.515] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[109.532] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[186.481] read():  <716> Rx: \x03
+[186.482] parseForPacket():  Received Ctrl-C from the client 
+[186.487] handleSignalPacket():  Device not halted(0), performing Ctrl-C
+[186.488] handleSignalPacket():  Device halted
+[186.489] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (1)
+[186.489] write():  <716> Tx: $S02#b5
+[186.489] read():  <716> Rx: $g#67
+[186.500] write():  <716> Tx: $000000003484012401000000812b0100efbeaddeefbeaddeefbeadde740c0024efbeaddeefbeaddeefbeaddeefbeadde00000000740c002489e80590861d06900f0000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000740c0024c00e0024#bd
+[186.503] read():  <716> Rx: $m90061d86,4#9f
+[186.503] handlePacket():  Reading 0x4 bytes of memory from addr 0x90061d86 
+[186.505] write():  <716> Tx: $1344044a#c5
+[186.506] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[186.506] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[186.507] read():  <716> Rx: $z0,90059e7a,2#38
+[186.507] write():  <716> Tx: $OK#9a
+[186.513] read():  <716> Rx: $T1#85
+[186.513] write():  <716> Tx: $OK#9a
+[186.513] read():  <716> Rx: $T1#85
+[186.514] write():  <716> Tx: $OK#9a
+[186.525] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[186.526] read():  <716> Rx: $c#63
+[186.527] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[186.543] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[186.679] read():  <716> Rx: \x03
+[186.680] parseForPacket():  Received Ctrl-C from the client 
+[186.685] handleSignalPacket():  Device not halted(0), performing Ctrl-C
+[186.686] handleSignalPacket():  Device halted
+[186.686] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (1)
+[186.687] write():  <716> Tx: $S02#b5
+[186.687] read():  <716> Rx: $g#67
+[186.698] write():  <716> Tx: $00000000348401249070002400000000efbeaddeefbeaddeefbeadde080f0024efbeaddeefbeaddeefbeaddeefbeadde00000000080f0024291f0090781f0090000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000800c0024080f0024#1d
+[186.699] read():  <716> Rx: $m90001f78,4#9c
+[186.699] handlePacket():  Reading 0x4 bytes of memory from addr 0x90001f78 
+[186.700] write():  <716> Tx: $e8e700bf#61
+[186.700] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[186.700] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[186.701] read():  <716> Rx: $m24000f0c,4#bc
+[186.701] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[186.702] write():  <716> Tx: $00000000#80
+[186.703] read():  <716> Rx: $m24000f0c,4#bc
+[186.703] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[186.704] write():  <716> Tx: $00000000#80
+[186.714] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[186.719] read():  <716> Rx: $m9006a4fc,2#f8
+[186.719] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a4fc 
+[186.720] write():  <716> Tx: $f3f7#36
+[186.721] read():  <716> Rx: $m9006a4fc,2#f8
+[186.721] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a4fc 
+[186.722] write():  <716> Tx: $f3f7#36
+[186.722] read():  <716> Rx: $m9006a4fc,2#f8
+[186.722] handlePacket():  Reading 0x2 bytes of memory from addr 0x9006a4fc 
+[186.723] write():  <716> Tx: $f3f7#36
+[186.723] read():  <716> Rx: $m90061674,2#6c
+[186.724] handlePacket():  Reading 0x2 bytes of memory from addr 0x90061674 
+[186.724] write():  <716> Tx: $a1f7#2f
+[186.724] read():  <716> Rx: $m90061678,2#70
+[186.724] handlePacket():  Reading 0x2 bytes of memory from addr 0x90061678 
+[186.725] write():  <716> Tx: $0348#cf
+[186.726] read():  <716> Rx: $m90059e62,2#9f
+[186.726] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e62 
+[186.727] write():  <716> Tx: $134b#fa
+[186.727] read():  <716> Rx: $m90059eb0,4#cb
+[186.727] handlePacket():  Reading 0x4 bytes of memory from addr 0x90059eb0 
+[186.727] write():  <716> Tx: $543e0024#c7
+[186.728] read():  <716> Rx: $m90059e96,2#a6
+[186.728] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e96 
+[186.728] write():  <716> Tx: $0b4b#28
+[186.730] read():  <716> Rx: $m90059e62,2#9f
+[186.730] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e62 
+[186.730] write():  <716> Tx: $134b#fa
+[186.730] read():  <716> Rx: $m90059eb0,4#cb
+[186.730] handlePacket():  Reading 0x4 bytes of memory from addr 0x90059eb0 
+[186.731] write():  <716> Tx: $543e0024#c7
+[186.731] read():  <716> Rx: $m90059e74,2#a2
+[186.731] handlePacket():  Reading 0x2 bytes of memory from addr 0x90059e74 
+[186.732] write():  <716> Tx: $01f0#f7
+[186.733] read():  <716> Rx: $m90054526,2#6a
+[186.733] handlePacket():  Reading 0x2 bytes of memory from addr 0x90054526 
+[186.734] write():  <716> Tx: $bb8c#5f
+[186.734] read():  <716> Rx: $m90054526,2#6a
+[186.734] handlePacket():  Reading 0x2 bytes of memory from addr 0x90054526 
+[186.735] write():  <716> Tx: $bb8c#5f
+[186.736] read():  <716> Rx: $m9005472a,2#97
+[186.736] handlePacket():  Reading 0x2 bytes of memory from addr 0x9005472a 
+[186.736] write():  <716> Tx: $3c4b#2c
+[186.737] read():  <716> Rx: $m9005481c,4#9b
+[186.737] handlePacket():  Reading 0x4 bytes of memory from addr 0x9005481c 
+[186.737] write():  <716> Tx: $90350024#97
+[186.737] read():  <716> Rx: $m900547ac,2#c8
+[186.737] handlePacket():  Reading 0x2 bytes of memory from addr 0x900547ac 
+[186.738] write():  <716> Tx: $1b4b#29
+[186.750] read():  <716> Rx: $Z0,90054526,2#b3
+[186.751] write():  <716> Tx: $OK#9a
+[186.751] read():  <716> Rx: $Z0,900547ac,2#11
+[186.751] write():  <716> Tx: $OK#9a
+[186.751] read():  <716> Rx: $Z0,90059e74,2#eb
+[186.752] write():  <716> Tx: $OK#9a
+[186.752] read():  <716> Rx: $Z0,90059e96,2#ef
+[186.753] write():  <716> Tx: $OK#9a
+[186.753] read():  <716> Rx: $Z0,90061678,2#b9
+[186.753] write():  <716> Tx: $OK#9a
+[186.753] read():  <716> Rx: $Z0,9006a4fc,2#41
+[186.754] write():  <716> Tx: $OK#9a
+[186.754] read():  <716> Rx: $c#63
+[186.755] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[186.771] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[188.949] read():  <716> Rx: \x03
+[188.949] parseForPacket():  Received Ctrl-C from the client 
+[188.955] handleSignalPacket():  Device not halted(0), performing Ctrl-C
+[188.956] handleSignalPacket():  Device halted
+[188.956] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (1)
+[188.956] write():  <716> Tx: $S02#b5
+[188.956] read():  <716> Rx: $g#67
+[188.967] write():  <716> Tx: $0000000034840124200f002401000000efbeaddeefbeaddeefbeadde080f0024efbeaddeefbeaddeefbeaddeefbeadde00000000080f0024291f0090561f0090000000810000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000800c0024080f0024#4a
+[188.967] read():  <716> Rx: $m90001f56,4#98
+[188.967] handlePacket():  Reading 0x4 bytes of memory from addr 0x90001f56 
+[188.968] write():  <716> Tx: $52f82330#cd
+[188.969] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[188.969] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[188.969] read():  <716> Rx: $z0,90054526,2#d3
+[188.969] write():  <716> Tx: $OK#9a
+[188.970] read():  <716> Rx: $z0,900547ac,2#31
+[188.970] write():  <716> Tx: $OK#9a
+[188.970] read():  <716> Rx: $z0,90059e74,2#0b
+[188.970] write():  <716> Tx: $OK#9a
+[188.970] read():  <716> Rx: $z0,90059e96,2#0f
+[188.971] write():  <716> Tx: $OK#9a
+[188.971] read():  <716> Rx: $z0,90061678,2#d9
+[188.971] write():  <716> Tx: $OK#9a
+[188.971] read():  <716> Rx: $z0,9006a4fc,2#61
+[188.971] write():  <716> Tx: $OK#9a
+[188.972] read():  <716> Rx: $m24000f0c,4#bc
+[188.972] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[188.972] write():  <716> Tx: $00000000#80
+[188.972] read():  <716> Rx: $m24000f0c,4#bc
+[188.972] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[188.973] write():  <716> Tx: $00000000#80
+[188.984] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[188.996] read():  <716> Rx: $Z0,90054526,2#b3
+[188.996] write():  <716> Tx: $OK#9a
+[188.997] read():  <716> Rx: $Z0,900547ac,2#11
+[188.998] write():  <716> Tx: $OK#9a
+[188.998] read():  <716> Rx: $Z0,90059e96,2#ef
+[188.998] write():  <716> Tx: $OK#9a
+[188.998] read():  <716> Rx: $Z0,90061678,2#b9
+[188.999] write():  <716> Tx: $OK#9a
+[188.999] read():  <716> Rx: $Z0,9006a4fc,2#41
+[188.999] write():  <716> Tx: $OK#9a
+[189.000] read():  <716> Rx: $c#63
+[189.001] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[189.018] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[388.406] read():  <716> Rx: \x03
+[388.406] parseForPacket():  Received Ctrl-C from the client 
+[388.412] handleSignalPacket():  Device not halted(0), performing Ctrl-C
+[388.413] handleSignalPacket():  Device halted
+[388.413] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (1)
+[388.413] write():  <716> Tx: $S02#b5
+[388.413] read():  <716> Rx: $g#67
+[388.423] write():  <716> Tx: $0000000034840124200f002400000000efbeaddeefbeaddeefbeadde080f0024efbeaddeefbeaddeefbeaddeefbeadde00000000080f0024291f00905a1f0090000000610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000800c0024080f0024#72
+[388.424] read():  <716> Rx: $m90001f5a,4#c3
+[388.424] handlePacket():  Reading 0x4 bytes of memory from addr 0x90001f5a 
+[388.425] write():  <716> Tx: $002b04d0#ec
+[388.425] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[388.425] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[388.426] read():  <716> Rx: $z0,90054526,2#d3
+[388.426] write():  <716> Tx: $OK#9a
+[388.426] read():  <716> Rx: $z0,900547ac,2#31
+[388.427] write():  <716> Tx: $OK#9a
+[388.427] read():  <716> Rx: $z0,90059e96,2#0f
+[388.427] write():  <716> Tx: $OK#9a
+[388.427] read():  <716> Rx: $z0,90061678,2#d9
+[388.427] write():  <716> Tx: $OK#9a
+[388.428] read():  <716> Rx: $z0,9006a4fc,2#61
+[388.428] write():  <716> Tx: $OK#9a
+[388.428] read():  <716> Rx: $m24000f0c,4#bc
+[388.428] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[388.428] write():  <716> Tx: $00000000#80
+[388.429] read():  <716> Rx: $m24000f0c,4#bc
+[388.429] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[388.429] write():  <716> Tx: $00000000#80
+[388.440] Device_GetStatus():  ST-LINK device status: HALT_MODE
+[388.452] read():  <716> Rx: $Z0,90054526,2#b3
+[388.452] write():  <716> Tx: $OK#9a
+[388.453] read():  <716> Rx: $Z0,900547ac,2#11
+[388.453] write():  <716> Tx: $OK#9a
+[388.453] read():  <716> Rx: $Z0,90061678,2#b9
+[388.454] write():  <716> Tx: $OK#9a
+[388.454] read():  <716> Rx: $Z0,9006a4fc,2#41
+[388.454] write():  <716> Tx: $OK#9a
+[388.455] read():  <716> Rx: $c#63
+[388.456] performContinue():  TraceCaptureStart and SWV event set to APP_TRUE 
+[388.472] Device_GetStatus():  ST-LINK device status: RUN_MODE
+[396.501] read():  <716> Rx: \x03
+[396.501] parseForPacket():  Received Ctrl-C from the client 
+[396.506] handleSignalPacket():  Device not halted(0), performing Ctrl-C
+[396.507] handleSignalPacket():  Device halted
+[396.508] handleGDBConnection():  TraceCaptureStart and SWV event set to APP_FALSE (1)
+[396.508] write():  <716> Tx: $S02#b5
+[396.508] read():  <716> Rx: $g#67
+[396.519] write():  <716> Tx: $0000000034840124200f002400000000efbeaddeefbeaddeefbeadde080f0024efbeaddeefbeaddeefbeaddeefbeadde00000000080f0024291f0090681f0090000000610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000460000000020bc3e4e000000400084d717000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000800c0024080f0024#4a
+[396.520] read():  <716> Rx: $m90001f68,4#9b
+[396.520] handlePacket():  Reading 0x4 bytes of memory from addr 0x90001f68 
+[396.521] write():  <716> Tx: $fb680133#fd
+[396.522] read():  <716> Rx: $qXfer:threads:read::0,bfb#fb
+[396.522] write():  <716> Tx: $l<?xml version="1.0"?><threads><thread id="1" core="0" name="main"></thread></threads>#8b
+[396.523] read():  <716> Rx: $z0,90054526,2#d3
+[396.523] write():  <716> Tx: $OK#9a
+[396.524] read():  <716> Rx: $z0,900547ac,2#31
+[396.524] write():  <716> Tx: $OK#9a
+[396.525] read():  <716> Rx: $z0,90061678,2#d9
+[396.525] write():  <716> Tx: $OK#9a
+[396.526] read():  <716> Rx: $z0,9006a4fc,2#61
+[396.527] write():  <716> Tx: $OK#9a
+[396.527] read():  <716> Rx: $m24000f0c,4#bc
+[396.527] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[396.529] write():  <716> Tx: $00000000#80
+[396.529] read():  <716> Rx: $m24000f0c,4#bc
+[396.529] handlePacket():  Reading 0x4 bytes of memory from addr 0x24000f0c 
+[396.531] write():  <716> Tx: $00000000#80
+[396.533] read():  <716> Rx: $k#6b

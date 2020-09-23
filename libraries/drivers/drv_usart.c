@@ -369,7 +369,7 @@ static rt_err_t stm32_gpio_configure(struct stm32_uart_config *config)
     uint16_t rx_pin;
     get_pin_by_name(config->rx_pin_name, &rx_port, &rx_pin);
     get_pin_by_name(config->tx_pin_name, &tx_port, &tx_pin);
-    
+
    struct gpio_uart_af {
        /* index get by GET_PIN */
        uint16_t pin_index;
@@ -501,6 +501,12 @@ static rt_err_t stm32_configure(struct rt_serial_device *serial, struct serial_c
     uart->handle.Init.HwFlowCtl    = UART_HWCONTROL_NONE;
     uart->handle.Init.Mode         = UART_MODE_TX_RX;
     uart->handle.Init.OverSampling = UART_OVERSAMPLING_16;
+
+    if(uart->handle.Instance == USART3)
+    {
+        uart->handle.Init.HwFlowCtl    = UART_HWCONTROL_RTS_CTS;
+    }
+
     switch (cfg->data_bits)
     {
     case DATA_BITS_8:
@@ -1392,5 +1398,8 @@ int rt_hw_usart_init(void)
 
     return result;
 }
-
 #endif /* RT_USING_SERIAL */
+
+
+
+

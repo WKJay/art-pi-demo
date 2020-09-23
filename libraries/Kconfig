@@ -59,6 +59,10 @@ menu "Onboard Peripheral"
         select ART_PI_USING_UART
         select BSP_USING_UART4
         default n
+    config BSP_USING_UART3
+        select ART_PI_USING_UART
+        bool "Enable UART3"
+        default n
 
     config BSP_USING_WIFI
         bool "Enable wifi (AP6212)"
@@ -108,6 +112,28 @@ menu "On-chip Peripheral"
                 bool "Enable SPI1"
                 default n
         endif
+    
+    config BSP_USING_BT_STACK
+        bool "Enable bt stack"
+        select RT_USING_LIBC
+        select RT_USING_PTHREADS
+        select RT_USING_POSIX
+        select RT_USING_POSIX_TERMIOS
+        select RT_USING_RYM
+        select BSP_USING_UART3
+        default n
+    
+    if BSP_USING_BT_STACK
+        config _GNU_SOURCE
+        int 
+        default 1
+        config HAVE_DIRENT_STRUCTURE
+        int 
+        default 1
+        config HAVE_DIR_STRUCTURE
+        int 
+        default 1
+    endif  
 
     menuconfig BSP_USING_SDIO
         bool "Enable SDIO"

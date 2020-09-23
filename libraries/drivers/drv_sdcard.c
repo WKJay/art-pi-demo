@@ -37,13 +37,13 @@ static void _sdcard_mount(void)
     }
     if (device != RT_NULL)
     {
-        if (dfs_mount("sd0", "/", "elm", 0, 0) == RT_EOK)
+        if (dfs_mount("sd0", "/sd", "elm", 0, 0) == RT_EOK)
         {
-            LOG_I("sd card mount to '/'");
+            LOG_I("sd card mount to '/sd'");
         }
         else
         {
-            LOG_W("sd card mount to '/' failed!");
+            LOG_W("sd card mount to '/sd' failed!");
         }
     }
 }
@@ -51,7 +51,7 @@ static void _sdcard_mount(void)
 static void _sdcard_unmount(void)
 {
     rt_thread_mdelay(200);
-    dfs_unmount("/");
+    dfs_unmount("/sd");
     LOG_I("Unmount \"/\"");
 
     mmcsd_wait_cd_changed(0);
@@ -89,7 +89,7 @@ int stm32_sdcard_mount(void)
     rt_pin_mode(SD_CHECK_PIN, PIN_MODE_INPUT_PULLUP);
 
     tid = rt_thread_create("sd_mount", sd_mount, RT_NULL,
-                           1024, RT_THREAD_PRIORITY_MAX - 2, 20);
+                           2048, RT_THREAD_PRIORITY_MAX - 2, 20);
     if (tid != RT_NULL)
     {
         rt_thread_startup(tid);
@@ -100,6 +100,6 @@ int stm32_sdcard_mount(void)
     }
     return RT_EOK;
 }
-INIT_APP_EXPORT(stm32_sdcard_mount);
+//INIT_APP_EXPORT(stm32_sdcard_mount);
 
 #endif /* ART_PI_USING_SDCARD */

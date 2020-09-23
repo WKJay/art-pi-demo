@@ -75,6 +75,10 @@ extern "C"
 #define BSP_UART1_RX_PIN       "PA10"
 #endif
 
+#define BSP_USING_UART3
+#define BSP_UART3_TX_PIN       "PB10"
+#define BSP_UART3_RX_PIN       "PB11"
+
 #ifdef BSP_USING_UART4
 #define BSP_UART4_TX_PIN       "PA0"
 #define BSP_UART4_RX_PIN       "PI9"
